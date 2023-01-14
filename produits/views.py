@@ -24,3 +24,19 @@ def store(request):
     article.prix= request.POST["prix"]
     article.save()
     return redirect('/produits')    
+
+def edit (request, id):
+  article = Article.get(id=id)
+  return render(request, "article/edit.html", {'A': article} )
+
+def update(request, id):
+  if request.method=='POST':
+    article = Article.objects.get(id=id);
+    article.nom= request.POST['Nom']
+    article.description=request.POST['Description']
+    article.prix= request.POST["prix"]
+    article.save()
+    return redirect('/produits')   
+  
+def contact (request):
+  return render(request,'contact.html')
