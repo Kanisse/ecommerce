@@ -2,12 +2,15 @@
 
 {% block content %}
 
-<form class="form-group" action="store" method="post">
+<form class="form-group " action="store" method="post">
   {% csrf_token %}
+    <label>Nom : </label>
     <input class="form-control" type="text" name="Nom" id="">
+    <label>Description : </label>
     <input class="form-control" type="text" name="Description" id="">
+    <label>Prix : </label>
     <input class="form-control" type="number" name="prix" id="">
-    <input class="form-control" type="submit" name="add">
+    <input class="btn btn-block btn-primary" type="submit" name="add">
   </form>
 {% endblock content %}
 

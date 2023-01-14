@@ -2,8 +2,7 @@
 
 {% block content %}
 <h1>Bienvenue dans la page Home</h1>
-    <h3> <a href='/contact'>contact</a> </h3>
-    <a href='/produits/create/' > Nouveau produit</a>
+     <a class ="btn btn-dark" href='/produits/create/' > Nouveau produit</a>
   <h3> la liste des produits</h3>
   <table class="table">
     <thead>
@@ -19,8 +18,8 @@
         <td>{{ article.nom }}</td>
         <td>{{ article.description }}</td>
         <td> {{ article.prix }}</td>
-        <td><a href='/produits/{{article.id}}'>supprimer</a></td>
-        <td><a href='/produits/edit/{{article.id}}'>modifier</a></td>
+        <td><a class="btn btn-danger" href='/produits/{{article.id}}'>supprimer</a></td>
+        <td><a class="btn btn-warning" href='/produits/edit/{{article.id}}'>modifier</a></td>
       </tr>
       {% endfor %}
     </tbody>

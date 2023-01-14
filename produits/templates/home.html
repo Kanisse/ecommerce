@@ -2,10 +2,18 @@
 {% extends 'template.html' %}
  {% block content %}
  <main>
-    <h4 class="alert-heading"></h4>
-    <p>Bienvenue dans la page Home</p>
-    <p class="mb-0"></p>
-  </div>
+    <div class="alert alert-success" >
+       <strong>Bienvenue dans la page Home</strong>
+    </div>
+
+  
+    <div class="alert alert-danger" >
+    <a class = "link-danger" href="\admin">Administration</a>
+    </div>
+    <div class="alert alert-primary" >
+      <a class = "link-primary" href="\produits">Produits</a>
+      </div>
+    
  </main>  
- {% endblock %}
+ {% endblock content %}
   

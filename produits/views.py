@@ -26,7 +26,7 @@ def store(request):
     return redirect('/produits')    
 
 def edit (request, id):
-  article = Article.get(id=id)
+  article = Article.objects.get(id=id)
   return render(request, "article/edit.html", {'A': article} )
 
 def update(request, id):
@@ -38,5 +38,3 @@ def update(request, id):
     article.save()
     return redirect('/produits')   
   
-def contact (request):
-  return render(request,'contact.html')
