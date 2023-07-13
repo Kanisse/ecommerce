@@ -12,6 +12,5 @@ urlpatterns = [
     path('produits/<id>',delete),
     path('produits/create/', create),
     path('produits/create/store', store, name='store'),
-    path ('produits/edit/<id>', edit),
     path('produits/edit/update/<id>', update)
 ]
